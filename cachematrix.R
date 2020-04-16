@@ -3,10 +3,13 @@
 
 ## Write a short comment describing this function
 
+# Creates a matrix and caches it's inverse
+# Input : Matrix
+# Output : Matrix with get/set inverse and values
 makeCacheMatrix <- function(x = matrix()) {
   
   inv <- NULL
-  
+  # We have getter/setter for Matrix
   get<-function() x
   set<-function(y){
     x<<-y
@@ -20,7 +23,10 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 ## Write a short comment describing this function
-
+#Computes the inverse of matrix. It returns cached
+# inverse if calculated before
+# Input: Matrix
+# Ouptut : Inverse of Matrix
 cacheSolve <- function(x, ...) {
   
   inv<- x$getinv()
